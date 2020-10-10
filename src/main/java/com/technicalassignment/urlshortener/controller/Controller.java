@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 
 
-@RequestMapping("url")
+@RequestMapping("/")
 @RestController
 public class Controller {
 
@@ -15,12 +15,12 @@ public class Controller {
     UrlShortenerService urlService = new UrlShortenerService();
 
 
-    @GetMapping("/{id}")
+    @GetMapping("{id}")
     public RedirectView redirectShortUrl(@PathVariable(value = "id") String id) {
         return urlService.redirectToOrgUrl(id);
     }
 
-    @PostMapping("/add")
+    @PostMapping("add")
     public String create(@RequestBody String request) throws JsonProcessingException {
         return urlService.createShortUrl(request);
     }
