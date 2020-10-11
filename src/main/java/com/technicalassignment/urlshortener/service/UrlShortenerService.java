@@ -56,5 +56,4 @@ public class UrlShortenerService {
         return redirectView;
     }
 
-
 }

@@ -28,7 +28,10 @@ public class Validator {
     }
 
     public boolean idAlreadyExist(String id, UrlAddressRepository urlAddressRepository) {
-        return id != null && urlAddressRepository != null && urlAddressRepository.findById(id).isPresent();
+        if (id != null && urlAddressRepository != null) {
+            return urlAddressRepository.findById(id).isPresent();
+        } else {
+            return false;
+        }
     }
-
 }

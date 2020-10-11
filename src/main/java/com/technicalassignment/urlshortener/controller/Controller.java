@@ -14,7 +14,6 @@ public class Controller {
     @Autowired
     UrlShortenerService urlService = new UrlShortenerService();
 
-
     @GetMapping("{id}")
     public RedirectView redirectShortUrl(@PathVariable(value = "id") String id) {
         return urlService.redirectToOrgUrl(id);
