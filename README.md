@@ -5,7 +5,7 @@
 - Postgres
 - Postman (or similar tool to make Json HTTP request)
 
-### Your request should look like
+### Your request should look like :
 #### For POST 
 url: http://localhost:8081/add
 ```json
